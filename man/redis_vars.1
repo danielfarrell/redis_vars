@@ -1,0 +1,43 @@
+.\" generated with Ronn/v0.7.3
+.\" http://github.com/rtomayko/ronn/tree/0.7.3
+.
+.TH "REDIS_VARS" "1" "December 2012" "" ""
+.
+.SH "NAME"
+\fBredis_vars\fR \- manage shared variables
+.
+.SH "SYNOPSIS"
+\fBredis_vars add <key> <value>\fR
+.
+.br
+\fBredis_vars remove <key>\fR
+.
+.br
+\fBredis_vars list\fR
+.
+.br
+\fBredis_vars export\fR
+.
+.SH "DESCRIPTION"
+RedisVars is a way to manage environment variables for a development team\.
+.
+.SH "ADDING"
+\fBredis_vars add\fR is used to add variables to the redis store\.
+.
+.P
+It requires a key and a value be passed in\.
+.
+.SH "REMOVING"
+\fBredis_vars remove\fR is used to remove a variables from the redis store\.
+.
+.P
+It requires passing in a key\.
+.
+.SH "EXPORTING"
+\fBredis_vars list\fR gives you a list of the variables in a format that will work for a Foreman \.env file or a \.rbenv\-vars file\.
+.
+.P
+\fBredis_vars export\fR gives you a list of the variables in a format that will work for a shell or a Pow \.powenv file\.
+.
+.SH "COPYRIGHT"
+RedisVars is Copyright (C) 2012 Daniel Farrellr \fIhttp://danielfarrell\.com\fR

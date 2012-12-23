@@ -1,0 +1,6 @@
+/.bundle
+/.rbenv-version
+/.rspec
+/*.gem
+/man/*.html
+/man/*.markdown

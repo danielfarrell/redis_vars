@@ -1,0 +1,37 @@
+redis_vars(1) -- manage shared variables
+========================================
+
+## SYNOPSIS
+
+`redis_vars add <key> <value>`<br>
+`redis_vars remove <key>`<br>
+`redis_vars list`<br>
+`redis_vars export`
+
+## DESCRIPTION
+
+RedisVars is a way to manage environment variables for a development team.
+
+## ADDING
+
+`redis_vars add` is used to add variables to the redis store.
+
+It requires a key and a value be passed in.
+
+## REMOVING
+
+`redis_vars remove` is used to remove a variables from the redis store.
+
+It requires passing in a key.
+
+## EXPORTING
+
+`redis_vars list` gives you a list of the variables in a format that will
+work for a Foreman .env file or a .rbenv-vars file.
+
+`redis_vars export` gives you a list of the variables in a format that
+will work for a shell or a Pow .powenv file.
+
+## COPYRIGHT
+
+RedisVars is Copyright (C) 2012 Daniel Farrellr <http://danielfarrell.com>
