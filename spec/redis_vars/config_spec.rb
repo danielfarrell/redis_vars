@@ -4,15 +4,15 @@ require "redis_vars/config"
 describe "RedisVars::Config" do
   subject { RedisVars::Config.new }
 
-  describe "uri" do
-    it "should allow setting uri from env var" do
-      test_uri = "redis://testing/5"
-      ENV["REDIS_VARS_URL"] = test_uri
-      subject.uri.should == test_uri
+  describe "url" do
+    it "should allow setting url from env var" do
+      test_url = "redis://testing/5"
+      ENV["REDIS_VARS_URL"] = test_url
+      subject.url.should == test_url
     end
     it "should return nil if no env var" do
       ENV["REDIS_VARS_URL"] = nil
-      subject.uri.should == nil
+      subject.url.should == nil
     end
   end
 

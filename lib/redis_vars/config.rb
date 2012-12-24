@@ -1,6 +1,6 @@
 module RedisVars
   class Config
-    def uri
+    def url
       ENV['REDIS_VARS_URL']
     end
 

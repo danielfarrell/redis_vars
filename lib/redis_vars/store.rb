@@ -30,8 +30,8 @@ module RedisVars
       hash.map &block
     end
 
-    def uri
-      config.uri
+    def url
+      config.url
     end
 
     def app_key
@@ -39,7 +39,7 @@ module RedisVars
     end
 
     def redis
-      @redis ||= Redis.new(:uri => uri)
+      @redis ||= Redis.new(:url => url)
     end
 
     def config
