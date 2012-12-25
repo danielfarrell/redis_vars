@@ -26,9 +26,9 @@ You can override the key used with an enviroment variable if you want to manage 
 
 ## Developing
 
-There are two different ways I envision this being used, non-invasive and invasive. Let's start with non-invasive:
+There are a few different ways I envision this being used: in configuation, on execution, and in code. Let's start with configuration:
 
-### Non-invasive
+### Configuration
 
 This allows you to export a list of the variables you have stored to a file you use in development. There seems to be the two different formats used places, with and without requiring export.  The list command is for without export, and export includes the export. Here are examples if that makes now sense:
 
@@ -44,9 +44,23 @@ Pow:
 
     redis_vars export > .powenv
 
-### Invasive
+### On Execution
 
-You can have it load in the environment variables automatically on application start with this method.
+As of version 0.7.0 there is an execute command to run a command with the environment variables you have in the store.
+
+Here is an example:
+
+    redis_vars execute unicorn_rails
+    
+If you had a single variable store of DEFAULT_USER with a value of daniel then it should execute the following:
+
+    DEFAULT_USER=daniel unicorn_rails
+
+I envision this being useful for running command line programs or even executing services.
+
+### In Code
+
+You can have it load in the environment variables automatically in a ruby/rails application with this method.
 
 Gemfile:
 

@@ -6,7 +6,8 @@ redis_vars(1) -- manage shared variables
 `redis_vars add <key> <value>`<br>
 `redis_vars remove <key>`<br>
 `redis_vars list`<br>
-`redis_vars export`
+`redis_vars export`<br>
+`redis_vars execute <command>`
 
 ## DESCRIPTION
 
@@ -31,6 +32,11 @@ work for a Foreman .env file or a .rbenv-vars file.
 
 `redis_vars export` gives you a list of the variables in a format that
 will work for a shell or a Pow .powenv file.
+
+## EXECUTING
+
+`redis_vars execute` is used to execute a command with the environment
+variables in the store.
 
 ## COPYRIGHT
 

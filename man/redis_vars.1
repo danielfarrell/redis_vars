@@ -18,6 +18,9 @@
 .br
 \fBredis_vars export\fR
 .
+.br
+\fBredis_vars execute <command>\fR
+.
 .SH "DESCRIPTION"
 RedisVars is a way to manage environment variables for a development team\.
 .
@@ -38,6 +41,9 @@ It requires passing in a key\.
 .
 .P
 \fBredis_vars export\fR gives you a list of the variables in a format that will work for a shell or a Pow \.powenv file\.
+.
+.SH "EXECUTING"
+\fBredis_vars execute\fR is used to execute a command with the environment variables in the store\.
 .
 .SH "COPYRIGHT"
 RedisVars is Copyright (C) 2012 Daniel Farrellr \fIhttp://danielfarrell\.com\fR

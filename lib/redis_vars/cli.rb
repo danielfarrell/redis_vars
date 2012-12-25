@@ -25,6 +25,11 @@ module RedisVars
       puts store.export
     end
 
+    desc "execute", "List variables to run a command with them"
+    def execute(*commands)
+      exec "/bin/sh -c '#{store.execute} #{commands.join(' ')}'"
+    end
+
     desc "version", "Displays gem version"
     def version
       puts VERSION
