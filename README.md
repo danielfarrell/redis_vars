@@ -76,7 +76,7 @@ Note that if you env vars are already set it will not overwrite them. This allow
 
 ## Inspiration
 
-I took a lot of inspiration from redis-env[https://github.com/brynary/redis-env], but wanted something in a language I knew and that would hit my different use cases(export, load in code, etc).
+I took a lot of inspiration from [redis-env](https://github.com/brynary/redis-env), but wanted something in a language I knew and that would hit my different use cases(export, load in code, etc).
 
 ## Authors
 
