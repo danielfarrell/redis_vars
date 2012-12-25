@@ -74,6 +74,10 @@ config/environments/development.rb:
 
 Note that if you env vars are already set it will not overwrite them. This allows you to do this method in combination with using the non-invasive method to override what is stored in redis.
 
+## Inspiration
+
+I took a lot of inspiration from redis-env[https://github.com/brynary/redis-env], but wanted something in a language I knew and that would hit my different use cases(export, load in code, etc).
+
 ## Authors
 
 #### Created and maintained by
