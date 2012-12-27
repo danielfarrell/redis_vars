@@ -46,13 +46,13 @@ Pow:
 
 ### On Execution
 
-As of version 0.7.0 there is an execute command to run a command with the environment variables you have in the store.
+As of version 0.7.x there is an exec command to run a command with the environment variables you have in the store.
 
 Here is an example:
 
-    redis_vars execute unicorn_rails
+    redis_vars exec unicorn_rails
     
-If you had a single variable store of DEFAULT_USER with a value of daniel then it should execute the following:
+If you had a single variable store of DEFAULT_USER with a value of daniel then it will execute the following:
 
     DEFAULT_USER=daniel unicorn_rails
 

@@ -37,13 +37,13 @@ describe "RedisVars::CLI" do
     end
   end
 
-  describe "execute" do
+  describe "exec" do
     before do
-      RedisVars::Store.any_instance.expects(:execute).returns("TEST_VAR=working")
-       RedisVars::CLI.any_instance.expects(:exec).with("/bin/sh -c 'TEST_VAR=working echo test'")
+      RedisVars::Store.any_instance.expects(:exec).returns("TEST_VAR=working")
+       Kernel.expects(:exec).with("/bin/sh -c 'TEST_VAR=working echo test'")
     end
     it "should delegate to store.execute and exec command" do
-      redis_vars("execute echo test")
+      redis_vars("exec echo test")
     end
   end
 

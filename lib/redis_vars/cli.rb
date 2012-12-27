@@ -25,9 +25,9 @@ module RedisVars
       puts store.export
     end
 
-    desc "execute", "List variables to run a command with them"
-    def execute(*commands)
-      exec "/bin/sh -c '#{store.execute} #{commands.join(' ')}'"
+    desc "exec", "Runs a command with the stored env vars"
+    def exec(*commands)
+      Kernel.exec "/bin/sh -c '#{store.exec} #{commands.join(' ')}'"
     end
 
     desc "version", "Displays gem version"

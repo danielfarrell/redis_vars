@@ -7,7 +7,7 @@ redis_vars(1) -- manage shared variables
 `redis_vars remove <key>`<br>
 `redis_vars list`<br>
 `redis_vars export`<br>
-`redis_vars execute <command>`
+`redis_vars exec <command>`
 
 ## DESCRIPTION
 
@@ -35,9 +35,9 @@ will work for a shell or a Pow .powenv file.
 
 ## EXECUTING
 
-`redis_vars execute` is used to execute a command with the environment
+`redis_vars exec` is used to execute a command with the environment
 variables in the store.
 
 ## COPYRIGHT
 
-RedisVars is Copyright (C) 2012 Daniel Farrellr <http://danielfarrell.com>
+RedisVars is Copyright (C) 2012 Daniel Farrell <http://danielfarrell.com>

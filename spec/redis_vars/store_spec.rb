@@ -55,10 +55,10 @@ describe "RedisVars::Store" do
     end
   end
 
-  describe "execute" do
+  describe "exec" do
     before { subject.expects(:hash).returns({"TEST_VAR" => "working", "test_var2" => "upcasing"}) }
     it "should return all variables in an list on one line" do
-      subject.execute.should == "TEST_VAR=working TEST_VAR2=upcasing"
+      subject.exec.should == "TEST_VAR=working TEST_VAR2=upcasing"
     end
   end
 

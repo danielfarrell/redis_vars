@@ -24,7 +24,7 @@ module RedisVars
       map {|key, val| "export #{key.upcase}=#{val}"}.join("\n")
     end
 
-    def execute
+    def exec
       map {|key, val| "#{key.upcase}=#{val}"}.join(" ")
     end
 
