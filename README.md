@@ -26,7 +26,23 @@ You can override the key used with an enviroment variable if you want to manage 
 
 ## Developing
 
-There are a few different ways I envision this being used: in configuation, on execution, and in code. Let's start with configuration:
+There are a couple of different ways I envision this being used: on execution and in configuation:
+
+### On Execution
+
+As of version 0.7.x there is an exec command to run a command with the environment variables you have in the store. As of 0.8.0, exec is the assumed command if you pass anything unknown.
+
+Here is an example:
+
+    redis_vars exec unicorn_rails -c config/unicorn.rb
+
+or
+
+    redis_vars unicorn_rails -c config/unicorn.rb
+
+It will set the environment variables you have stored and then execute the command that you passed.
+
+This is useful for running command line programs(binstubs for example) and executing services without having to worry about loading the environment variables.
 
 ### Configuration
 
@@ -43,36 +59,6 @@ rbenv(with rbenv-vars plugin):
 Pow:
 
     redis_vars export > .powenv
-
-### On Execution
-
-As of version 0.7.x there is an exec command to run a command with the environment variables you have in the store.
-
-Here is an example:
-
-    redis_vars exec unicorn_rails
-    
-If you had a single variable store of DEFAULT_USER with a value of daniel then it will execute the following:
-
-    DEFAULT_USER=daniel unicorn_rails
-
-I envision this being useful for running command line programs or even executing services.
-
-### In Code
-
-You can have it load in the environment variables automatically in a ruby/rails application with this method.
-
-Gemfile:
-
-    group :development do
-      gem 'redis_vars'
-    end
-
-config/environments/development.rb:
-
-    RedisVars.load
-
-Note that if you env vars are already set it will not overwrite them. This allows you to do this method in combination with using the non-invasive method to override what is stored in redis.
 
 ## Inspiration
 
