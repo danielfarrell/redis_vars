@@ -4,6 +4,7 @@ require "thor"
 
 module RedisVars
   class CLI < Thor
+    default_task :list
 
     desc "add KEY VALUE", "Add a new env var"
     def add(key, value)
@@ -26,8 +27,8 @@ module RedisVars
     end
 
     desc "exec", "Runs a command with the stored env vars"
-    def exec(*commands)
-      Kernel.exec "/bin/sh -c '#{store.exec} #{commands.join(' ')}'"
+    def exec(*args)
+      Kernel.exec(store.hash, *args)
     end
 
     desc "version", "Displays gem version"
