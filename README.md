@@ -10,6 +10,10 @@ Set REDIS_VARS_URL for your shell(.profile/.bash_profile/.zprofile/etc):
 
     export REDIS_VARS_URL=redis://password@hostname:port/db
 
+Set APP_KEY to your application (will default to pwd):
+
+    export APP_KEY=my_application_name
+
 ## Managing
 
 It uses your project directory name as the key, so use consistently named folders for your team.  Switch into your project directory and run any of the following commands:
